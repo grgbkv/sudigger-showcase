@@ -18,7 +18,8 @@
 | Startups tracked | 4,751 |
 | Partnership-ready top targets (4–5★) | 982 |
 | Signal events logged | 8,460 over two months of unattended operation |
-| Funding rounds caught before public news | BirdyChat **−22 days** · TAPAYA **−16 days** · Edmund **−4 days** (~11 early catches in a typical 30-day window) |
+| Funding rounds caught before public news | 6 verified: BirdyChat **−22d** · Kodesage **−21d** · TAPAYA **−16d** · DesignVerse **−9d** · Webout **−8d** · Edmund **−4d** — [receipts with public links](docs/CATCHES.md) |
+| Catches while running fully unattended | 3 of the 6 (Kodesage, DesignVerse, Webout) landed in a 30-day window with zero operator intervention |
 | Operating cost | tens of $/month — ~5% of a naive full-refresh design |
 | Team adoption | daily use by the BD team; final leads database delivered to the org |
 
@@ -74,9 +75,11 @@ for supported countries, live web scan for the rest. The full product design is 
 
 ## What's in this repo
 
+- [docs/CATCHES.md](docs/CATCHES.md) — **the receipts**: every early catch with internal timestamps + public news links, independently checkable
 - [docs/PRD.md](docs/PRD.md) — the product requirements doc for the productized version
 - [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) — engineering decisions + operational war stories
-- [sample_data/sample_targets.csv](sample_data/sample_targets.csv) — **synthetic** rows showing the output schema
+- [sample_data/real_top_targets_sample.csv](sample_data/real_top_targets_sample.csv) — 21 real 5★ targets across 11 countries (trimmed columns)
+- [sample_data/sample_targets.csv](sample_data/sample_targets.csv) — synthetic rows showing the **full** output schema
 - `assets/` — dashboard screenshots (data redacted)
 
 ## What's deliberately NOT here

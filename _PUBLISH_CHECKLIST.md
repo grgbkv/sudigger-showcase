@@ -11,7 +11,11 @@ Run through this top to bottom the day you publish. Nothing goes public until ev
 
 ## Data
 - [ ] `grep -ri "docs.google.com\|onedrive\|sharepoint" .` → zero hits
-- [ ] No real company rows anywhere — sample_data is 100% synthetic (every row says "synthetic")
+- [ ] Real-data files are bounded: `real_top_targets_sample.csv` (21 rows, trimmed columns:
+      no founder/LinkedIn/MSFT-fit/account/comments) and `docs/CATCHES.md` (only facts that are
+      already public + our timestamps). Publishing these is gated on the IP skim below —
+      a small sample is a demonstration; the full CSV would be the deliverable. Keep it small.
+- [ ] Synthetic file stays clearly marked (every row says "synthetic")
 - [ ] Screenshots redacted with SOLID FILL (not blur/pixelation) per assets/README.md
 - [ ] No 🟡 ACCOUNT / 🟢 COMMENTS content visible in any screenshot (that's colleagues' text)
 
