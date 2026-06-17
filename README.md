@@ -78,6 +78,7 @@ for supported countries, live web scan for the rest. The full product design is 
 - [docs/CATCHES.md](docs/CATCHES.md) — **the receipts**: every early catch with internal timestamps + public news links, independently checkable
 - [docs/PRD.md](docs/PRD.md) — the product requirements doc for the productized version
 - [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) — engineering decisions + operational war stories
+- [docs/HARNESS.md](docs/HARNESS.md) — SUDigger redrawn as an agent harness (loop / tools / context / control gates)
 - [sample_data/real_top_targets_sample.csv](sample_data/real_top_targets_sample.csv) — 21 real 5★ targets across 11 countries (trimmed columns)
 - [sample_data/sample_targets.csv](sample_data/sample_targets.csv) — synthetic rows showing the **full** output schema
 - `assets/` — dashboard screenshots (data redacted)
