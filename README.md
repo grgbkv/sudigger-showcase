@@ -10,6 +10,12 @@
 > data + credentials); this repo documents the architecture, the design decisions, and the
 > results, with synthetic sample data.
 
+**▶ [Interactive walkthrough](https://grgbkv.github.io/sudigger-showcase/)** — the receipts,
+the loop, the economics, and a browsable slice of the real dataset, on one page.
+**▶ Run the mechanism:** `python3 -m engine` — a clean-room [mini-engine](engine/README.md)
+replays the signal-driven loop on a synthetic 60-day world (zero dependencies, zero keys) and
+catches a "funding round" 18 days early at 2.8% of the naive scoring cost.
+
 ## Results
 
 | Metric | Value |
@@ -75,13 +81,14 @@ for supported countries, live web scan for the rest. The full product design is 
 
 ## What's in this repo
 
+- **[index.html](https://grgbkv.github.io/sudigger-showcase/)** — the interactive showcase site (static, no build step)
+- **[engine/](engine/README.md)** — the runnable mini-engine: the signal-driven loop, clean-room, on synthetic fixtures, with tests (`python3 -m unittest discover engine/tests`)
 - [docs/CATCHES.md](docs/CATCHES.md) — **the receipts**: every early catch with internal timestamps + public news links, independently checkable
 - [docs/PRD.md](docs/PRD.md) — the product requirements doc for the productized version
 - [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md) — engineering decisions + operational war stories
 - [docs/HARNESS.md](docs/HARNESS.md) — SUDigger redrawn as an agent harness (loop / tools / context / control gates)
 - [sample_data/real_top_targets_sample.csv](sample_data/real_top_targets_sample.csv) — 21 real 5★ targets across 11 countries (trimmed columns)
 - [sample_data/sample_targets.csv](sample_data/sample_targets.csv) — synthetic rows showing the **full** output schema
-- `assets/` — dashboard screenshots (data redacted)
 
 ## What's deliberately NOT here
 

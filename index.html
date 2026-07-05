@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUDigger — signal-driven startup intelligence</title>
+<meta name="description" content="A startup-intelligence pipeline that surfaced funding rounds 4–22 days before public news across 12 CEE & Central Asia countries. Architecture, receipts, and a runnable mini-engine.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<!-- ============================================================ HERO -->
+<header class="hero">
+  <nav>
+    <span class="wordmark">SU<span>Digger</span></span>
+    <div class="nav-links">
+      <a href="#receipts">Receipts</a>
+      <a href="#loop">How it works</a>
+      <a href="#demo">Data</a>
+      <a href="#engine">Run it</a>
+      <a href="https://github.com/grgbkv/sudigger-showcase" class="gh">GitHub</a>
+    </div>
+  </nav>
+  <div class="hero-inner">
+    <h1>Startup intelligence that surfaced funding rounds<br>
+      <em>before the news did</em></h1>
+    <p class="hero-sub">A signal-driven pipeline I built and operated solo during my internship on
+      Microsoft's CEE &amp; Central Asia BD team. It discovered, verified and scored
+      partnership-ready startups across 12 countries — and flagged six funding events
+      <strong>4–22 days before public coverage</strong>, in a region where commercial databases
+      openly acknowledge a coverage gap.</p>
+    <div class="stat-strip">
+      <div class="stat"><span class="stat-n" data-count="12">0</span><span class="stat-l">countries in production</span></div>
+      <div class="stat"><span class="stat-n" data-count="4751">0</span><span class="stat-l">startups tracked</span></div>
+      <div class="stat"><span class="stat-n" data-count="982">0</span><span class="stat-l">partnership-ready targets</span></div>
+      <div class="stat"><span class="stat-n" data-count="8460">0</span><span class="stat-l">signals in 2 months</span></div>
+      <div class="stat"><span class="stat-n" data-count="22">0</span><span class="stat-l">days — best lead on a round</span></div>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn primary" href="#receipts">See the receipts</a>
+      <a class="btn" href="#engine">Run the engine</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================ RECEIPTS -->
+<section id="receipts">
+  <h2>The receipts</h2>
+  <p class="section-sub">Every internal timestamp is from the pipeline's append-only changelog;
+    every announcement date links to public coverage. Anyone can check the math.
+    <a href="docs/CATCHES.md">Full receipts →</a></p>
+  <div class="lead-chart" id="lead-chart"></div>
+  <div class="catch-cards" id="catch-cards"></div>
+  <div class="callout">
+    <strong>3 of the 6 catches landed while the system ran fully unattended</strong> — a 30-day
+    window with zero operator intervention. The mechanism produces the latency, not the operator:
+    hiring, portfolio additions and local-language press move weeks before the press release, and
+    the pipeline watches exactly those.
+  </div>
+</section>
+
+<!-- ============================================================ THE LOOP -->
+<section id="loop">
+  <h2>How it works — the loop</h2>
+  <p class="section-sub">One daily cycle. Country-specific code exists only at the edges; the core
+    is one universal pipeline. Click a stage, or let it walk itself.</p>
+  <div class="loop-wrap">
+    <div class="loop-steps" id="loop-steps"></div>
+    <div class="loop-detail card" id="loop-detail"></div>
+  </div>
+</section>
+
+<!-- ============================================================ ECONOMICS -->
+<section id="economics">
+  <h2>The economics — one decision, two outcomes</h2>
+  <p class="section-sub">Re-score a company only when a real-world signal lands. Watching changes
+    instead of snapshots is simultaneously the cheap design and the early-warning design.</p>
+  <div class="econ-grid">
+    <div class="card econ-card">
+      <h3>LLM cost vs the naive design</h3>
+      <div class="bar-row"><span class="bar-label">re-score everything daily</span>
+        <div class="bar-track"><div class="bar full" data-w="100"></div></div><span class="bar-val">100%</span></div>
+      <div class="bar-row"><span class="bar-label">signal-driven (production)</span>
+        <div class="bar-track"><div class="bar signal" data-w="5"></div></div><span class="bar-val">~5%</span></div>
+      <p class="econ-note">The mini-engine in this repo reproduces the ratio on synthetic data:
+        31 scoring calls vs a 1,114-call counterfactual — <strong>2.8%</strong>.</p>
+    </div>
+    <div class="card econ-card">
+      <h3>Cost of a seat</h3>
+      <div class="seat-compare">
+        <div><span class="seat-price">€12.6k–25k</span><span class="seat-label">commercial database, per team, per year — and thinnest exactly in this region</span></div>
+        <div><span class="seat-price accent">tens of $</span><span class="seat-label">SUDigger, per month, all-in (LLM + infra), 12 countries</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ DEMO DASHBOARD -->
+<section id="demo">
+  <h2>A slice of the real dataset</h2>
+  <p class="section-sub">21 real 5★ targets across 11 countries — trimmed columns from the
+    production database (the full dataset was delivered to the team it was built for).
+    Switch to the synthetic tab to see the full output schema.</p>
+  <div class="card demo-card">
+    <div class="demo-controls">
+      <div class="tabs">
+        <button class="tab active" data-tab="real">Real sample</button>
+        <button class="tab" data-tab="synth">Full schema (synthetic)</button>
+      </div>
+      <div class="chips" id="country-chips"></div>
+    </div>
+    <div class="table-wrap"><table id="demo-table"></table></div>
+    <p class="demo-foot" id="demo-foot"></p>
+  </div>
+</section>
+
+<!-- ============================================================ DECISIONS -->
+<section id="decisions">
+  <h2>Design decisions that mattered</h2>
+  <div class="decision-grid">
+    <div class="card decision">
+      <h3>Verification is the product</h3>
+      <p>LLM-guessed LinkedIn URLs were ~90% broken. Every URL is HTTP-verified with content
+        matching; every company geo-verified before entering a country file; unverifiable facts
+        published as honest "Not found" — never guessed. The dashboards earned daily use because
+        nothing in them is hallucinated.</p>
+    </div>
+    <div class="card decision">
+      <h3>Conservative beats aggressive</h3>
+      <p>The first name-cleaning pass made 969 automatic changes — and broke real names
+        ("Labs of Latvia" → "Labs of"). The rewrite touches a name only when a legal suffix is
+        positively detected: 513 changes, zero false positives. Cross-script dedup still collapses
+        «Иннотех» and "Innotech" into one row.</p>
+    </div>
+    <div class="card decision">
+      <h3>Human data is sacred</h3>
+      <p>The team annotates rows directly in the dashboards. Sync reads those columns before every
+        rebuild and writes them back after. In months of daily rebuilds, no annotation was ever
+        lost — the difference between a tool the team tolerates and one it trusts.</p>
+    </div>
+    <div class="card decision">
+      <h3>What I deliberately didn't build</h3>
+      <p>A Copilot chat agent as the pipeline — prototyped, measured, rejected: a chat agent
+        answers from one live web pass and degrades under orchestration. The correct shape is the
+        agent as a <em>window</em> onto a hosted pipeline <em>engine</em>. That finding is the
+        <a href="docs/PRD.md">PRD</a>; the harness view is in <a href="docs/HARNESS.md">HARNESS.md</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ ENGINE -->
+<section id="engine">
+  <h2>Run the mechanism yourself</h2>
+  <p class="section-sub">The production source is private. So this repo carries a clean-room
+    <strong>mini-engine</strong> — the same loop on a synthetic 60-day world. Zero dependencies,
+    zero keys, deterministic.</p>
+  <div class="card terminal">
+    <div class="term-bar"><span></span><span></span><span></span>
+      <code>python3 -m engine</code></div>
+    <pre id="term-body">$ python3 -m engine</pre>
+  </div>
+  <p class="engine-links">
+    <a class="btn" href="engine/README.md">Engine README</a>
+    <a class="btn" href="docs/DESIGN_DECISIONS.md">Design decisions &amp; war stories</a>
+    <a class="btn" href="docs/CATCHES.md">The receipts</a>
+  </p>
+</section>
+
+<!-- ============================================================ FOOTER -->
+<footer>
+  <div class="arc">
+    <div class="arc-item"><span class="arc-date">Mar 2026</span><span>first country live (CZ), local cron</span></div>
+    <div class="arc-item"><span class="arc-date">May 2026</span><span>9 countries · Sheets + Excel dashboards · first verified catches</span></div>
+    <div class="arc-item"><span class="arc-date">Jun 2026</span><span>12 countries · 4,751 companies · cloud pipeline (Azure Container Apps + Foundry) · leads database delivered to the org</span></div>
+  </div>
+  <p>Designed, built and operated by one person. Python · Azure OpenAI · gspread / openpyxl /
+    Microsoft Graph · cron.<br>
+    <a href="https://github.com/grgbkv/sudigger-showcase">github.com/grgbkv/sudigger-showcase</a></p>
+</footer>
+
+</main>
+
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
