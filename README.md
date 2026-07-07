@@ -1,7 +1,8 @@
 # SUDigger — startup intelligence that beat PitchBook on latency
 
 > A signal-driven startup-intelligence pipeline I built and operated solo during my internship
-> on Microsoft's CEE & Central Asia Business Development team. It discovered, verified, and
+> with Microsoft's Enterprise Partner Solutions team in Central and Eastern Europe and Central
+> Asia. It discovered, verified, and
 > scored partnership-ready startups across 12 countries and published daily dashboards the team
 > worked in — flagging funding events up to **22 days before public news**, in a region where
 > commercial databases openly acknowledge a coverage gap.
@@ -27,7 +28,7 @@ catches a "funding round" 18 days early at 2.8% of the naive scoring cost.
 | Funding rounds caught before public news | 6 verified: BirdyChat **−22d** · Kodesage **−21d** · TAPAYA **−16d** · DesignVerse **−9d** · Webout **−8d** · Edmund **−4d** — [receipts with public links](docs/CATCHES.md) |
 | Catches while running fully unattended | 3 of the 6 (Kodesage, DesignVerse, Webout) landed in a 30-day window with zero operator intervention |
 | Operating cost | tens of $/month — ~5% of a naive full-refresh design |
-| Team adoption | daily use by the BD team; final leads database delivered to the org |
+| Team adoption | daily use by the partner-solutions team; final leads database delivered to the org |
 
 ## Architecture
 
@@ -64,7 +65,7 @@ A 16-file playbook makes new-country onboarding a <1-day task — country #12 (U
    HTTP-verified with content matching; every company is geo-verified before entering a country
    file; name auto-cleaning runs conservative-only after an aggressive version produced false
    positives. The dashboards earned trust because nothing in them is hallucinated.
-3. **Meet users where they live.** The BD team works in Sheets and Excel — so the product *is*
+3. **Meet users where they live.** The team works in Sheets and Excel — so the product *is*
    Sheets and Excel, rebuilt daily around their manual annotations, not a new tool to adopt.
 
 More depth in [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md), including the failure modes
