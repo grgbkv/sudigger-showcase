@@ -98,4 +98,5 @@ for supported countries, live web scan for the rest. The full product design is 
 - Internal dashboard links
 
 *Built with Python · LLM enrichment via Azure OpenAI · gspread / openpyxl / Microsoft Graph ·
-cron. Designed, built, and operated by one person.*
+cron. Designed, built, and operated by one person — with real credit due to the AI tooling that
+shared the work: Claude (Anthropic), Antigravity (Google), and Azure AI Foundry (Microsoft).*
