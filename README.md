@@ -100,7 +100,7 @@ for supported countries, live web scan for the rest. The full product design is 
 
 ## What's deliberately NOT here
 
-- The dataset (4,751 companies) — delivered to the team it was built for; not mine to publish
+- The dataset (4,751 companies at the June 2026 delivery; 4,985 tracked today) — delivered to the team it was built for; not mine to publish
 - Production source code and credentials
 - Internal dashboard links
 

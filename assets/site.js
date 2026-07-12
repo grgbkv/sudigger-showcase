@@ -165,7 +165,7 @@ function renderTable() {
   document.getElementById("demo-table").innerHTML = head + body;
   document.getElementById("demo-foot").textContent = demoTab === "real"
     ? `${rows.length} of 21 rows shown — real 5★ targets, trimmed columns. The full database ` +
-      `(4,751 companies, 30+ columns) was delivered to the team it was built for.`
+      `(4,751 companies at the June 2026 delivery, 30+ columns) was delivered to the team it was built for.`
     : `${rows.length} synthetic rows — invented companies showing the full production schema, ` +
       `including the five scoring indicators and the signal trail.`;
 }

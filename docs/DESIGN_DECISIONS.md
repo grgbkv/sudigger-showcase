@@ -5,7 +5,7 @@
 
 ## 1. Signal-driven rescoring (the core economic decision)
 
-**Problem:** 4,751 companies × daily LLM re-evaluation = unaffordable and pointless (most
+**Problem:** 4,985 companies × daily LLM re-evaluation = unaffordable and pointless (most
 companies change nothing in a given week).
 
 **Decision:** an append-only changelog + signal queue. Daily collectors (news watcher, job
