@@ -4,7 +4,7 @@
 > with Microsoft's Enterprise Partner Solutions team in Central and Eastern Europe and Central
 > Asia. It discovered, verified, and
 > scored partnership-ready startups across 12 countries and published daily dashboards the team
-> worked in — flagging funding events up to **22 days before public news**, in a region where
+> worked in — flagging funding events up to **69 days before public news** — including a $130M first-ever round at a $3.6B valuation, in a region where
 > commercial databases openly acknowledge a coverage gap.
 >
 > **This is a showcase repository.** The production source and dataset are private (company
