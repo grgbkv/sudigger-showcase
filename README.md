@@ -22,13 +22,20 @@ catches a "funding round" 18 days early at 2.8% of the naive scoring cost.
 | Metric | Value |
 |---|---|
 | Countries in production | 12 — CZ · EE · KZ · LV · LT · PL · RO · SK · HU · MD · UA · UZ |
-| Startups tracked | 4,751 |
-| Partnership-ready top targets (4–5★) | 982 |
-| Signal events logged | 8,460 over two months of unattended operation |
-| Funding rounds caught before public news | 6 verified: BirdyChat **−22d** · Kodesage **−21d** · TAPAYA **−16d** · DesignVerse **−9d** · Webout **−8d** · Edmund **−4d** — [receipts with public links](docs/CATCHES.md) |
-| Catches while running fully unattended | 3 of the 6 (Kodesage, DesignVerse, Webout) landed in a 30-day window with zero operator intervention |
+| Startups tracked | 4,985 active (a further 1,216 low-signal registry rows tiered to a searchable archive, 2026-07-12) |
+| Partnership-ready top targets (4–5★) | 1,507 under the universal criteria (2026-07); 982 under the original Microsoft-lens criteria |
+| Signal events logged | 9,519 over three months of largely unattended operation |
+| Funding rounds caught before public news | **8 verified**: grid.online **−69d** · Oxylabs **−26d** ($130M first-ever round at $3.6B) · BirdyChat **−22d** · Kodesage **−21d** · TAPAYA **−16d** · DesignVerse **−9d** · Webout **−8d** · Edmund **−4d** — [receipts with public links](docs/CATCHES.md) |
+| Catches while running fully unattended | 5 of the 8 (Kodesage, DesignVerse, Webout, grid.online, Oxylabs) landed with zero operator intervention |
 | Operating cost | tens of $/month — ~5% of a naive full-refresh design |
 | Team adoption | daily use by the partner-solutions team; final leads database delivered to the org |
+
+> **July 2026 — the universal pivot.** After the internship the cloud edition dropped the
+> single-vendor lens: scoring and briefs now serve **cloud-provider partnership teams (any
+> hyperscaler), venture investors, and startup-ecosystem programs**. The live dashboard grew
+> daily-digest, weekly-pulse and country-brief views plus 100 evidence-bound partnership
+> dossiers; a weekly VC-portfolio monitor watches 95 funds across 10 countries; and the
+> full history (news, jobs, digests) is retained instead of rotated.
 
 ## Architecture
 
