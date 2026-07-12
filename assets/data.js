@@ -302,6 +302,34 @@ const SYNTH_SAMPLE = [
 
 const CATCHES = [
  {
+  "company": "grid.online",
+  "country": "CZ",
+  "flag": "🇨🇿",
+  "inPipeline": "2026-04-14",
+  "public": "2026-06-22",
+  "lead": 69,
+  "round": "€4M round — J&T Ventures participating",
+  "how": "investor-portfolio watcher saw J&T's position ~10 weeks before the press (same mechanism as DesignVerse)",
+  "links": [
+   {"label": "Tech.eu", "url": "https://tech.eu/2026/06/22/czech-logistics-startup-grid-online-lands-4m-after-growing-deliveries-10-in-a-year/"},
+   {"label": "EU-Startups", "url": "https://www.eu-startups.com/2026/06/with-almost-2000-active-couriers-grid-online-raises-e4-million-to-expand-shared-last-mile-delivery-network"}
+  ]
+ },
+ {
+  "company": "Oxylabs",
+  "country": "LT",
+  "flag": "🇱🇹",
+  "inPipeline": "2026-06-13",
+  "public": "2026-07-09",
+  "lead": 26,
+  "round": "$130M from Warburg Pincus at $3.6B — first-ever outside round",
+  "how": "tracked before a round that had never existed; claimed from the first clean pre-round record (a noisier April record is not counted)",
+  "links": [
+   {"label": "SiliconANGLE", "url": "https://siliconangle.com/2026/07/09/web-data-scraping-infrastructure-startup-oxylabs-reels-130m-first-ever-funding-round/"},
+   {"label": "TFN", "url": "https://techfundingnews.com/oxylabs-130m-warburg-pincus-3-6b-valuation/"}
+  ]
+ },
+ {
   "company": "BirdyChat",
   "country": "LV",
   "flag": "🇱🇻",
